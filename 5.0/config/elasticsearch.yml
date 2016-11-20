@@ -1,5 +1,25 @@
-network.host: 0.0.0.0
-
+network.host: 192.168.0.1
 # this value is required because we set "network.host"
 # be sure to modify it appropriately for a production cluster deployment
 discovery.zen.minimum_master_nodes: 1
+
+#
+# Lock the memory on startup:
+#
+bootstrap.memory_lock: true
+
+###############
+# SMTP CONFIG #
+###############
+#xpack.notification.email.account:
+#  gmail_account:
+#    profile: gmail #available values: standard(default), gmail, outlook
+#    email_defaults:
+#      from: 'Dream Beam <name.name@host.domain>'
+#    smtp:
+#      auth: true
+#      starttls.enable: true
+#      host: smtp.gmail.com # examples: smtp-mail.outlook.com, email-smtp.us-east-1.amazonaws.com
+#      port: 587
+#      user: <username>
+#      password: <password>
